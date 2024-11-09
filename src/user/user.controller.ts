@@ -10,6 +10,3 @@ export class UsersController {
     return req.user;
   }
 }
-
-
-

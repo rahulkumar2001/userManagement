@@ -14,7 +14,7 @@ async function bootstrap() {
     .build();
   
   const document = SwaggerModule.createDocument(app, options);
-  SwaggerModule.setup('api', app, document);  // Set '/api' as the endpoint for Swagger UI
+  SwaggerModule.setup('api/doc', app, document);  // Set '/api' as the endpoint for Swagger UI
 
   await app.listen(process.env.PORT ?? 3000);
 }

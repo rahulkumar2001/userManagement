@@ -21,13 +21,12 @@ export class  UsersService {
 
     const userdetails = await this.findOne(mobile);
     if(userdetails){
-      throw new BadRequestException('user mobile number already exists.');
+      throw new BadRequestException('this mobile number already exists.');
     }
 
     const user = this.usersRepository.create({ mobile, name, password: hashedPassword });
     return this.usersRepository.save(user);
   }
-
 
 
 
